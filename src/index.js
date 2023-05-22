@@ -43,3 +43,54 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+
+const menu = document.querySelectorAll("nav a");
+menu.forEach(a => a.classList.add("italic") )
+menu[0].textContent = siteContent["nav"]["nav-item-1"];
+menu[1].textContent = siteContent["nav"]["nav-item-2"];
+menu[2].textContent = siteContent["nav"]["nav-item-3"];
+menu[3].textContent = siteContent["nav"]["nav-item-4"];
+menu[4].textContent = siteContent["nav"]["nav-item-5"];
+menu[5].textContent = siteContent["nav"]["nav-item-6"];
+
+const resim = document.querySelector("#logo-img");
+resim.setAttribute("src", siteContent["images"]["logo-img"]);
+
+const ctaBaslik = document.querySelector(".cta-text h1");
+const ctaButon = document.querySelector(".cta-text button");
+ctaBaslik.textContent = siteContent.cta.h1;
+ctaButon.textContent = siteContent.cta.button;
+const ctaResim = document.querySelector("#cta-img");
+ctaResim.setAttribute("src",siteContent["images"]["cta-img"]);
+
+
+
+
+const textBaslik = document.querySelectorAll(".text-content h4");
+const textParagraf = document.querySelectorAll(".text-content p");
+
+textBaslik[0].textContent = siteContent["ana-içerik"]["özellikler-h4"];
+textParagraf[0].textContent = siteContent["ana-içerik"]["özellikler-içerik"]
+textBaslik[1].textContent = siteContent["ana-içerik"]["hakkımızda-h4"];
+textParagraf[1].textContent = siteContent["ana-içerik"]["hakkımızda-içerik"];
+
+const ortaResim = document.querySelector("#middle-img");
+ortaResim.setAttribute("src", siteContent["images"]["accent-img"]);
+
+textBaslik[2].textContent = siteContent["ana-içerik"]["servisler-h4"];
+textParagraf[2].textContent = siteContent["ana-içerik"]["servisler-içeriği"];
+textBaslik[3].textContent = siteContent["ana-içerik"]["ürünler-h4"];
+textParagraf[3].textContent = siteContent["ana-içerik"]["ürünler-içeriği"];
+textBaslik[4].textContent = siteContent["ana-içerik"]["vizyon-h4"];
+textParagraf[4].textContent = siteContent["ana-içerik"]["vizyon-içeriği"];
+
+
+document.querySelector(".contact h4").textContent = siteContent.iletisim["iletişim-h4"];
+const contact = document.querySelectorAll(".contact p");
+contact[0].textContent = siteContent.iletisim.adres;
+contact[1].textContent = siteContent.iletisim.telefon;
+contact[2].textContent = siteContent.iletisim.email;
+
+const altBilgi = document.querySelector("footer a")
+altBilgi.classList.add("bold");
+altBilgi.textContent = siteContent.footer.copyright;
