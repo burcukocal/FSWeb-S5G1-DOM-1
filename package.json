@@ -5,7 +5,10 @@
     "start": "fkill :9000 :3000 -s && concurrently \"npm:backend\" \"npm:frontend\"",
     "frontend": "webpack serve --open",
     "backend": "node mocks/api.js",
-    "test": "cross-env NODE_ENV=testing jest"
+    "test": "cross-env NODE_ENV=testing jest",
+    "build": "npm run build:frontend && npm run build:backend",
+  "build:frontend": "webpack --mode production",
+  "build:backend": "echo 'No backend build step defined'"
   },
   "devDependencies": {
     "@babel/core": "7.17.5",
